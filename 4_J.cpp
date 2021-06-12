@@ -93,14 +93,14 @@ int main() {
 	size_t minpos = unique_words.size();
 	size_t max_num = 0;
 	vector<string> finalwords;
-	for(const auto& [word, value] : storage) { //максимальное значение
+	for(const auto& [word, value] : storage) { //Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ
 		if(max_num <= value.first) {
 			max_num = value.first;
 		}
 	}
 	string result_word;
 	for(const auto& [word, value] : storage) {
-		if(value.first == max_num && minpos >= value.second) { //первое появление слова
+		if(value.first == max_num && minpos >= value.second) { //ГЇГҐГ°ГўГ®ГҐ ГЇГ®ГїГўГ«ГҐГ­ГЁГҐ Г±Г«Г®ГўГ 
 			minpos = value.second;
 			result_word = word;
 		}
